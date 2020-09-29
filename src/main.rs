@@ -15,6 +15,9 @@ fn main() {
         if line == "stop" {
             drop(worker.take());
             continue;
+        } else if line == "start" {
+            worker = Some(spawn_worker());
+            continue;
         };
 
 
